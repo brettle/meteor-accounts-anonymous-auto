@@ -12,7 +12,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use('brettle:accounts-anonymous');
+  api.use('brettle:accounts-anonymous@0.0.1');
   api.use('accounts-base');
   api.use('deps');
   api.addFiles('meteor-accounts-anonymous-auto.js', 'client');
@@ -20,6 +20,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('brettle:accounts-anonymous-auto');
+  api.use('brettle:accounts-anonymous-auto@0.0.1');
   api.addFiles('meteor-accounts-anonymous-auto-tests.js', 'client');
 });
