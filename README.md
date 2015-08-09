@@ -1,5 +1,6 @@
-# accounts-anonymous-auto
-=========================
+# brettle:accounts-anonymous-auto
+
+[![Build Status](https://travis-ci.org/brettle/meteor-accounts-anonymous-auto.svg?branch=master)](https://travis-ci.org/brettle/meteor-accounts-anonymous-auto)
 
 Automatically create anonymous accounts for each new visitor to ensure that
 there is always an account associated with the current user.
