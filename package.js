@@ -1,10 +1,10 @@
 Package.describe({
   name: 'brettle:accounts-anonymous-auto',
-  version: '0.0.3',
+  version: '0.0.4',
   // Brief, one-line summary of the package.
   summary: 'Automatically create anonymous accounts for each new visitor',
   // URL to the Git repository containing the source code for this package.
-  git: 'git@github.com:brettle/meteor-accounts-anonymous-auto.git',
+  git: 'https://github.com/brettle/meteor-accounts-anonymous-auto.git',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
