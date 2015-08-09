@@ -1,5 +1,5 @@
 Meteor.startup(function(){
-  Deps.autorun(function () {
+  Tracker.autorun(function () {
     if (!Meteor.userId()) {
       AccountsAnonymous.login();
     }

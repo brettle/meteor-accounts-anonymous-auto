@@ -1,6 +1,6 @@
 Package.describe({
   name: 'brettle:accounts-anonymous-auto',
-  version: '0.0.2',
+  version: '0.0.3',
   // Brief, one-line summary of the package.
   summary: 'Automatically create anonymous accounts for each new visitor',
   // URL to the Git repository containing the source code for this package.
@@ -14,12 +14,13 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
   api.use('brettle:accounts-anonymous@0.0.1');
   api.use('accounts-base');
-  api.use('deps');
+  api.use('tracker');
   api.addFiles('meteor-accounts-anonymous-auto.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('brettle:accounts-anonymous-auto@0.0.1');
+  api.use('accounts-base');
   api.addFiles('meteor-accounts-anonymous-auto-tests.js', 'client');
 });
