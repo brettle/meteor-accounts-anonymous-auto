@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.3');
+  api.versionsFrom('1.0');
   api.use('brettle:accounts-anonymous@0.0.1');
   api.use('accounts-base');
   api.use('tracker');
