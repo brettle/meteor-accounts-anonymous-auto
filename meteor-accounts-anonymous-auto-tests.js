@@ -1,4 +1,6 @@
-Tinytest.addAsync('AccountsAnonymous - auto-login', function (test, done) {
+
+Tinytest.addAsync('AccountsAnonymousAuto - auto-login', function (test, done) {
+  AccountsAnonymousAuto._enabled.set(true);
   var loginFailureStopper = Accounts.onLoginFailure(function () {
       loginFailureStopper.stop();
       test.fail('Login failed');
@@ -9,8 +11,15 @@ Tinytest.addAsync('AccountsAnonymous - auto-login', function (test, done) {
         checkLogin();
     });
   } else {
-    checkLogin();
+    Meteor.logout(function (err) {
+      test.isUndefined(err);
+      Tracker.flush();
+      Meteor.setTimeout(function () {
+        checkLogin();
+      }, 100);
+    });
   }
+
   function checkLogin() {
     var initialId = Meteor.userId();
     test.isNotNull(initialId);
@@ -28,6 +37,7 @@ Tinytest.addAsync('AccountsAnonymous - auto-login', function (test, done) {
       function checkLoginAfterLogout() {
         var newId = Meteor.userId();
         test.notEqual(newId, initialId);
+        AccountsAnonymousAuto._enabled.set(false);
         done();
       }
     });
