@@ -1,6 +1,6 @@
 Package.describe({
   name: 'brettle:accounts-anonymous-auto',
-  version: '0.1.0',
+  version: '0.2.0',
   // Brief, one-line summary of the package.
   summary: 'Automatically create anonymous accounts for each new visitor',
   // URL to the Git repository containing the source code for this package.
@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0');
+  api.versionsFrom('1.0.4');
   api.use('brettle:accounts-anonymous@0.0.1');
   api.use('accounts-base');
   api.use('tracker');
@@ -21,6 +21,7 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
+  api.versionsFrom('1.0.4');
   api.use('tinytest');
   api.use('brettle:accounts-anonymous-auto@0.1.0');
   api.use('brettle:accounts-multiple@0.1.0');
