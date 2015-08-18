@@ -1,3 +1,6 @@
+"use strict";
+/* globals AccountsAnonymousAuto: true, AccountsAnonymous */
+
 AccountsAnonymousAuto = {
   _enabled: new ReactiveVar(true)
 };

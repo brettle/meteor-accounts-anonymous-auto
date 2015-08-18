@@ -1,4 +1,7 @@
 
+"use strict";
+/* globals AccountsAnonymousAuto */
+
 Tinytest.addAsync('AccountsAnonymousAuto - auto-login', function (test, done) {
   AccountsAnonymousAuto._enabled.set(true);
   var loginFailureStopper = Accounts.onLoginFailure(function () {
