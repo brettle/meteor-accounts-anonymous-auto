@@ -1,4 +1,3 @@
-
 "use strict";
 /* globals AccountsAnonymousAuto */
 
@@ -41,6 +40,7 @@ Tinytest.addAsync('AccountsAnonymousAuto - auto-login', function (test, done) {
         var newId = Meteor.userId();
         test.notEqual(newId, initialId);
         AccountsAnonymousAuto._enabled.set(false);
+        loginFailureStopper.stop();
         done();
       }
     });
