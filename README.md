@@ -8,9 +8,9 @@ the current user always has an account.
 This also means that if a user signs out of their account, the package will
 automatically sign them in to a newly created anonymous account.
 
-This package uses brettle:accounts-anonymous to actually log the user into new
-anonymous accounts. All that this package does is automatically call
-`AccountsAnonymous.login()` whenever `Meteor.user()` is null.
+This package is part of the `brettle:accounts-*` suite of packages. See
+[`brettle:accounts-deluxe`](https://atmospherejs.com/brettle/accounts-deluxe)
+for an overview of the suite and a live demo.
 
 ## Installation
 ```sh
